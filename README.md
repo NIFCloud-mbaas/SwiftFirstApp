@@ -4,10 +4,10 @@
 
 ## コンテンツ概要
 
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の機能『データストア』を学習するための問題集です
- * [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の利用登録（無料）が必要です。
+* [ニフクラ mobile backend](http://mb.cloud.nifty.com/)の機能『データストア』を学習するための問題集です
+ * [ニフクラ mobile backend](http://mb.cloud.nifty.com/)の利用登録（無料）が必要です。
 * 問題用プロジェクトにはオンラインランキング機能が実装されていない状態の「連打ゲーム」です
- * 既に実装済みの[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)を利用するための準備（SDK導入など）方法の詳細は[こちら](http://mb.cloud.nifty.com/doc/current/introduction/quickstart_ios.html)をご覧ください。
+ * 既に実装済みの[ニフクラ mobile backend](http://mb.cloud.nifty.com/)を利用するための準備（SDK導入など）方法の詳細は[こちら](http://mb.cloud.nifty.com/doc/current/introduction/quickstart_ios.html)をご覧ください。
 
 ## 問題について
 
@@ -43,7 +43,7 @@
 
 ![mBaaS](/readme-img/mBaaS.png)
 
-*  [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)にログインしアプリの新規作成を行います
+*  [ニフクラ mobile backend](http://mb.cloud.nifty.com/)にログインしアプリの新規作成を行います
  * アプリ名はわかりやすいものにしましょう。例）「renda」
 * アプリが作成されるとAPIキーが２種類（アプリケーションキーとクライアントキー）発行されます
  * 次で使用します。
@@ -51,7 +51,7 @@
 ![Xcode](/readme-img/Xcode.png)
 
 * `AppDelegate.swift`を編集します
-* 先程[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のダッシュボード上で確認したAPIキーを貼り付けます
+* 先程[ニフクラ mobile backend](http://mb.cloud.nifty.com/)のダッシュボード上で確認したAPIキーを貼り付けます
 
 ![問題0-1](/readme-img/0-1.png)
 
@@ -68,7 +68,7 @@
 * `name`を保存するフィールドを「`name`」、`score`を保存するフィールドを「`score`」として保存してください
 
 ### ヒント
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
+* [ニフクラ mobile backend](http://mb.cloud.nifty.com/)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
  * [Swiftでデータベースを使おう！①（保存・取得・更新・削除）](http://qiita.com/natsumo/items/c00cf7a48e0f8cd8d236)
 
 ### コーディング後の作業
@@ -116,7 +116,7 @@ __【作業1-2】__シュミレーターで実行、「Start」ボタンを押�
  * ただし、この値は「`rankingNumber`」としてフィールドに設定しているため、「`5`」の代わりに「`Int32(rankingNumber)`」を使用して設定してください
 
 ### ヒント
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
+* [ニフクラ mobile backend](http://mb.cloud.nifty.com/)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
  * [Swiftでデータベースを使おう！③（ランキングを作る・アクセス権限）](http://qiita.com/natsumo/items/25074fa1ce209033e98e)
 
 ### コーディング後の作業
