@@ -1,6 +1,0 @@
-framework module Pods_SwiftFirstApp {
-  umbrella header "Pods-SwiftFirstApp-umbrella.h"
-
-  export *
-  module * { export * }
-}
