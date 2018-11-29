@@ -33,22 +33,22 @@ class GameViewController: UIViewController{
         // ラベルの初期値設定
         self.label.text = "↓Startボタンを押してゲームスタート↓"
         // テキストフィールド編集不可
-        self.counter.enabled = false
+        self.counter.isEnabled = false
         // 的のタップを不可に設定
         tapFlag = false
     }
     
     // 「Start」ボタン押下時の処理
-    @IBAction func startGame(sender: UIButton) {
+    @IBAction func startGame(_ sender: UIButton) {
         // 実行中ボタンの無効化
-        sender.enabled = false
-        checkRanking.enabled = false
+        sender.isEnabled = false
+        checkRanking.isEnabled = false
         // カウンターを0にする
         count = 0
         // タイマーを13秒にする
         countTimer = 13
         // タイマーを起動
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "timerAction:", userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerAction(sender:)), userInfo: nil, repeats: true)
     }
     
     // 【mBaaS】データの保存
@@ -72,7 +72,7 @@ class GameViewController: UIViewController{
     }
         
     // タイマーの処理
-    func timerAction(sender:NSTimer){
+    @objc func timerAction(sender:Timer){
         if countTimer >= 11 {
             self.label.text = String(countTimer - 10)
         } else {
@@ -87,7 +87,7 @@ class GameViewController: UIViewController{
                 // タイマーストップ
                 sender.invalidate()
                 // 名前入力アラートの表示
-                inputName(self.count)
+                inputName(sender: self.count)
             }
         }
         countTimer -= 1
@@ -96,25 +96,25 @@ class GameViewController: UIViewController{
     // 名前入力アラートの表示
     func inputName (sender: Int) {
         // 名前を入力するアラートを表示
-        let alert = UIAlertController(title: "スコア登録", message: "名前を入力してください", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "スコア登録", message: "名前を入力してください", preferredStyle: .alert)
         // UIAlertControllerにtextFieldを追加
-        alert.addTextFieldWithConfigurationHandler { (textField: UITextField!) -> Void in
+        alert.addTextField { (textField: UITextField!) -> Void in
         }
         // アラートの「OK」ボタン押下時の処理
-        alert.addAction(UIAlertAction(title: "OK", style: .Default) { (action: UIAlertAction!) -> Void in
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { (action: UIAlertAction!) -> Void in
             // 名前とスコアを保存
-            self.saveScore(alert.textFields![0].text!, score: sender)
+            self.saveScore(name: alert.textFields![0].text!, score: sender)
             // 名前とスコアの表示
             self.label.text = "\(alert.textFields![0].text!)さんのスコアは\(sender)連打でした"
             // 実行後ボタンの有効化
-            self.start.enabled = true
-            self.checkRanking.enabled = true
+            self.start.isEnabled = true
+            self.checkRanking.isEnabled = true
             })
-        presentViewController(alert, animated: true, completion: nil)
+        present(alert, animated: true, completion: nil)
     }
     
     // viewシングルタップ時の処理
-    @IBAction func tapView(sender: UITapGestureRecognizer) {
+    @IBAction func tapView(_ sender: UITapGestureRecognizer) {
         if tapFlag {
             self.count += 1
             self.counter.text = "\(count)"
