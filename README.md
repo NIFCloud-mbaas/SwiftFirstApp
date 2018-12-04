@@ -6,7 +6,7 @@
 
 * [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の機能『データストア』を学習するための問題集です
  * [ニフクラ mobile backend](https://mbaas.nifcloud.com/)の利用登録（無料）が必要です。
-* 問題用プロジェクトにはオンラインランキング機能が実装されていない状態の「連打ゲーム」です
+* 問題用プロジェクトはオンラインランキング機能が実装されていない状態の「連打ゲーム」です
  * 既に実装済みの[ニフクラ mobile backend](https://mbaas.nifcloud.com/)を利用するための準備（SDK導入など）方法の詳細は[こちら](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_ios.html)をご覧ください。
 
 ## 問題について
@@ -23,7 +23,7 @@
 
 ▼問題用プロジェクト▼
 
-[__「連打ゲーム」__](https://github.com/natsumo/SwiftFirstApp/archive/master.zip)
+[__「連打ゲーム」__](https://github.com/NIFCloud-mbaas/SwiftFirstApp/archive/master.zip)
 
 1. 上記リンクをクリックしてzipファイルをローカルに保存します
 1. zipファイルを解凍して、`SwiftFirstApp.xcworkspace`をダブルクリックしてXcodeでプロジェクトを開きます
@@ -104,7 +104,7 @@ __【作業1-2】__シュミレーターで実行、「Start」ボタンを押�
 
 ▼答えはこちら▼
 
-[__【問題１】解答__](https://github.com/natsumo/SwiftFirstApp/blob/AnswerProject/Answer1.md)
+[__【問題１】解答__](https://github.com/NIFCloud-mbaas/SwiftFirstApp/blob/AnswerProject/Answer1.md)
 
 
 ## __【問題２】__：ランキングを表示しよう！
@@ -168,7 +168,7 @@ __【作業2-4】__シュミレーターで実行、「ランキングを見る�
 
 ▼答えはこちら▼
 
-[__【問題２】解答__](https://github.com/natsumo/SwiftFirstApp/blob/AnswerProject/Answer2.md)
+[__【問題２】解答__](https://github.com/NIFCloud-mbaas/SwiftFirstApp/blob/AnswerProject/Answer2.md)
 
 ## 参考
 
@@ -176,6 +176,6 @@ __【作業2-4】__シュミレーターで実行、「ランキングを見る�
 
 ▼完成版プロジェクト▼
 
-[__「【完成版】連打ゲーム」__](https://github.com/natsumo/SwiftFirstApp/archive/AnswerProject.zip)
+[__「【完成版】連打ゲーム」__](https://github.com/NIFCloud-mbaas/SwiftFirstApp/archive/AnswerProject.zip)
 
 * APIキーを設定してご利用ください
