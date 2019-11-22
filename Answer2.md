@@ -18,24 +18,25 @@
 ```swift
 // **********【問題２】ランキングを表示しよう！**********
 // GameScoreクラスを検索するクエリを作成
-let query = NCMBQuery(className: "GameScore")
+var query : NCMBQuery<NCMBObject> = NCMBQuery.getQuery(className: "GameScore")
 // scoreの降順でデータを取得するように設定する
-query.addDescendingOrder("score")
+query.order = ["-score"]
 // 検索件数を設定
-query.limit = Int32(rankingNumber)
+query.limit = rankingNumber
 // データストアを検索
-query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
-    if error != nil {
-        // 検索に失敗した場合の処理
-        print("検索に失敗しました。エラーコード：\(error.code)")
-    } else {
-        // 検索に成功した場合の処理
-        print("検索に成功しました。")
-        // 取得したデータを格納
-        self.rankingArray = objects as! Array
-        // テーブルビューをリロード
-        self.rankingTableView.reloadData()
+query.findInBackground(callback: { result in
+    switch result {
+        case let .success(array):
+            // 検索に成功した場合の処理
+            print("検索に成功しました。")
+            // 取得したデータを格納
+            self.rankingArray = array
+            // テーブルビューをリロード
+            self.rankingTableView.reloadData()
+        case let .failure(error):
+            // 検索に失敗した場合の処理
+            print("検索に失敗しました。エラーコード：\(error)")
     }
-}
+})
 // **************************************************
 ```
