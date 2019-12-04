@@ -4,10 +4,10 @@
 
 ## コンテンツ概要
 
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の機能『データストア』を学習するための問題集です
- * [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)の利用登録（無料）が必要です。
+* [ニフクラmobile backend](https://mbaas.nifcloud.com)の機能『データストア』を学習するための問題集です
+ * [ニフクラmobile backend](https://mbaas.nifcloud.com)の利用登録（無料）が必要です。
 * 問題用プロジェクトにはオンラインランキング機能が実装されていない状態の「連打ゲーム」です
- * 既に実装済みの[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)を利用するための準備（SDK導入など）方法の詳細は[こちら](http://mb.cloud.nifty.com/doc/current/introduction/quickstart_ios.html)をご覧ください。
+ * 既に実装済みの[ニフクラmobile backend](https://mbaas.nifcloud.com)を利用するための準備（SDK導入など）方法の詳細は[こちら](https://mbaas.nifcloud.com/doc/current/introduction/quickstart_swift.html)をご覧ください。
 
 ## 問題について
 
@@ -23,7 +23,7 @@
 
 ▼問題用プロジェクト▼
 
-[__「連打ゲーム」__](https://github.com/natsumo/SwiftFirstApp/archive/master.zip)
+[「連打ゲーム」](https://github.com/NIFCLOUD-mbaas/SwiftFirstApp/archive/master.zip)
 
 1. 上記リンクをクリックしてzipファイルをローカルに保存します
 1. zipファイルを解凍して、`SwiftFirstApp.xcworkspace`をダブルクリックしてXcodeでプロジェクトを開きます
@@ -43,7 +43,7 @@
 
 ![mBaaS](/readme-img/mBaaS.png)
 
-*  [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)にログインしアプリの新規作成を行います
+*  [ニフクラmobile backend](https://mbaas.nifcloud.com)にログインしアプリの新規作成を行います
  * アプリ名はわかりやすいものにしましょう。例）「renda」
 * アプリが作成されるとAPIキーが２種類（アプリケーションキーとクライアントキー）発行されます
  * 次で使用します。
@@ -51,7 +51,7 @@
 ![Xcode](/readme-img/Xcode.png)
 
 * `AppDelegate.swift`を編集します
-* 先程[ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のダッシュボード上で確認したAPIキーを貼り付けます
+* 先程[ニフクラmobile backend](https://mbaas.nifcloud.com)のダッシュボード上で確認したAPIキーを貼り付けます
 
 ![問題0-1](/readme-img/0-1.png)
 
@@ -59,7 +59,7 @@
  * このとき、ダブルクォーテーション（`"`）を消さないように注意してください！
 
 ## __【問題１】__：名前とスコアの保存をしてみよう！
-`GameViewController.swift`を開きます。下図の__`saveScore`__メソッドを編集し、引数の__`name`__（アラートで入力した名前）と__`score`__（連打ゲームでタップした回数）の値をmBaaSに保存する処理をコーディングしてください
+`GameViewController.swift`を開きます。下図の__`saveScore`__メソッドを編集し、引数の__`name`__（アラートで入力した名前）と`score`(連打ゲームでタップした回数）の値をmBaaSに保存する処理をコーディングしてください
 
 ![問題1-1](/readme-img/1-1.png)
 
@@ -68,7 +68,7 @@
 * `name`を保存するフィールドを「`name`」、`score`を保存するフィールドを「`score`」として保存してください
 
 ### ヒント
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
+* [ニフクラmobile backend](https://mbaas.nifcloud.com)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
  * [Swiftでデータベースを使おう！①（保存・取得・更新・削除）](http://qiita.com/natsumo/items/c00cf7a48e0f8cd8d236)
 
 ### コーディング後の作業
@@ -104,10 +104,10 @@ print("保存に成功しました。objectId:\(obj.objectId)")
 
 ▼答えはこちら▼
 
-[__【問題１】解答__](https://github.com/natsumo/SwiftFirstApp/blob/AnswerProject/Answer1.md)
+[【問題１】解答](https://github.com/NIFCLOUD-mbaas/SwiftFirstApp/blob/AnswerProject/Answer1.md)
 
 
-## __【問題２】__：ランキングを表示しよう！
+## 【問題２】：ランキングを表示しよう！
 `RankingViewController.swift`を開きます。下図の`checkRanking`メソッドを編集し、データストアの`GameScore`クラスに保存した`name`と`score`のデータを`score`の降順（スコアの高い順）で検索・取得する処理をコーディングしてください
 
 ![問題2-1](/readme-img/2-1.png)
@@ -116,7 +116,7 @@ print("保存に成功しました。objectId:\(obj.objectId)")
  * ただし、この値は「`rankingNumber`」としてフィールドに設定しているため、「`5`」の代わりに「`Int32(rankingNumber)`」を使用して設定してください
 
 ### ヒント
-* [ニフティクラウドmobile backend](http://mb.cloud.nifty.com/)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
+* [ニフクラmobile backend](https://mbaas.nifcloud.com)のiOSドキュメントはObjective-Cで書かれていますので、Swiftに書き換えたものを用意しました
  * [Swiftでデータベースを使おう！③（ランキングを作る・アクセス権限）](http://qiita.com/natsumo/items/25074fa1ce209033e98e)
 
 ### コーディング後の作業
@@ -145,7 +145,7 @@ print("検索に成功しました。")
  * 「`検索に成功しました。`」が表示された場合は検索成功です
  * 「`検索に失敗しました。エラーコード:************`」が表示された場合は検索失敗です
 
-※エラーコードが出た場合は[こちら](http://mb.cloud.nifty.com/doc/current/rest/common/error.html#REST%20API%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)で確認できます
+※エラーコードが出た場合は[こちら](https://mbaas.nifcloud.com/doc/current/rest/common/error.html#REST%20APIのエラーコードについて)で確認できます
 
 * 検索の状態（成功・失敗）に関係なく、「ランキングを見る」ボタンをタップしても、まだランキングは表示されません
 
@@ -168,7 +168,7 @@ self.rankingTableView.reloadData()
 
 ▼答えはこちら▼
 
-[【問題２】解答](https://github.com/natsumo/SwiftFirstApp/blob/AnswerProject/Answer2.md)
+[【問題２】解答](https://github.com/NIFCLOUD-mbaas/SwiftFirstApp/blob/AnswerProject/Answer2.md)
 
 ## 参考
 
@@ -176,6 +176,6 @@ self.rankingTableView.reloadData()
 
 ▼完成版プロジェクト▼
 
-[「【完成版】連打ゲーム」](https://github.com/natsumo/SwiftFirstApp/archive/AnswerProject.zip)
+[「【完成版】連打ゲーム」](https://github.com/NIFCLOUD-mbaas/SwiftFirstApp/archive/AnswerProject.zip)
 
 * APIキーを設定してご利用ください
