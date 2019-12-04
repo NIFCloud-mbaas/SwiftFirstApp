@@ -1,6 +1,6 @@
 ## 【問題１】答え合わせ
 
-### ニフティクラウドmobile backend上での確認
+### ニフクラ mobile backend上での確認
 ![mBaaS](/readme-img/mBaaS.png)
 
 * 保存されたデータを確認しましょう
