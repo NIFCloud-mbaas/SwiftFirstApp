@@ -71,7 +71,7 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
             name.text = "\(unwrapObject["name"]! as String)さん"
             // スコアの表示
             let score = cell.viewWithTag(3) as! UILabel
-            score.text = "\(unwrapObject["score"]! as String)連打"
+            score.text = "\(unwrapObject["score"]! as Int)連打"
         }
         
         return cell
